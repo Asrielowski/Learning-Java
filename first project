@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        /* EXERCISE 1 */
+
+        /*
+         * CREATE A SIMPLE TRIVIA GAME
+         *
+         * Define (at least) three questions with three answers.
+         * Prompt the User the type in their answer using the Scanner, you've seen in the output/input video
+         * Then use if/else statements to check if the answer from the user is correct! And output that they were.
+         * If they were wrong, tell the user and output the correct answer.
+         *
+         * BONUS: increment a points total each time the user is correct and at the end make a unique output for each
+         * score the user might have (0 to 3)
+         *
+         * IMPORTANT TIPS:
+         * 1. When reading in Strings from the user use scanner.next() (NOT scanner.nextLine())
+         * 2. When you have an answer and input that are both strings you will have to use:
+         *    userInput.equals(answer) instead of userInput == answer
+         */
+
+        Scanner scanner = new Scanner(System.in);
+
+        // questions
+        String question1 = "What is the capital of France?";
+        String question2 = "What programming language are you learning right now?";
+        String question3 = "What is the best drink?";
+        // correct answers
+        String correct_answer1 = "paris";
+        String correct_answer2 = "java";
+        String correct_answer3 = "coffee";
+        // your answers
+        String answer1, answer2, answer3;
+        // your points
+        int your_points = 0;
+
+        System.out.println(question1);
+        answer1 = scanner.next();
+        System.out.println(question2);
+        answer2 = scanner.next();
+        System.out.println(question3);
+        answer3 = scanner.next();
+
+        // System.out.println(answer1 + answer2 + answer3);
+
+        answer1 = answer1.toLowerCase();
+        answer2 = answer2.toLowerCase();
+        answer3 = answer3.toLowerCase();
+
+        // System.out.println(answer1 + answer2 + answer3);
+
+        if(answer1.equals(correct_answer1)){
+            your_points ++;
+            System.out.println("You answered the first question correctly");
+        }else System.out.println("You answered the first question incorrectly");
+
+        if(answer2.equals(correct_answer2)){
+            your_points ++;
+            System.out.println("You answered the second question correctly");
+        }else System.out.println("You answered the second question incorrectly");
+
+        if(answer3.equals(correct_answer3)){
+            your_points ++;
+            System.out.println("You answered the third question correctly");
+        }else System.out.println("You answered the third question incorrectly");
+
+        System.out.println("Your total number of points is: " + your_points);
+
+    }
+}
