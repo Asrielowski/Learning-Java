@@ -54,17 +54,17 @@ public class Main {
         if(answer1.equals(correct_answer1)){
             your_points ++;
             System.out.println("You answered the first question correctly");
-        }else System.out.println("You answered the first question incorrectly");
+        }else System.out.println("You answered the first question incorrectly, the correct answer was Paris");
 
         if(answer2.equals(correct_answer2)){
             your_points ++;
             System.out.println("You answered the second question correctly");
-        }else System.out.println("You answered the second question incorrectly");
+        }else System.out.println("You answered the second question incorrectly, the correct answer was java");
 
         if(answer3.equals(correct_answer3)){
             your_points ++;
             System.out.println("You answered the third question correctly");
-        }else System.out.println("You answered the third question incorrectly");
+        }else System.out.println("You answered the third question incorrectly, the correct answer was coffee");
 
         System.out.println("Your total number of points is: " + your_points);
 
